@@ -3,64 +3,157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Weather app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+      <nav>
+        <ul>
+          <li><a href="#"><img src="assets/images/logo.svg" alt=""></a><h5>Weather Now</h5></li>
+          <li>
+                <div class="dropdown">
+                  <button id="units">⚙ Units</button>
+                  <div class="menu">
+                    <p>Temperature</p>
+                    <label><input type="radio" name="temp"> Celsius (°C)</label>
+                    <label><input type="radio" name="temp"> Fahrenheit (°F)</label>
 
-  Units
-
-  Switch to Imperial/Metric
-
-  Temperature
-
-  Celsius (°C)
-  Fahrenheit (°F)
-
-  Wind Speed
-
-  km/h
-  mph
-
-  Precipitation
-
-  Millimeters (mm)
-  Inches (in)
-
-  How's the sky looking today?
-
-  Search for a city, e.g., New York
-  Search
-
-  Feels like
-  <!-- Insert temperature here -->
-
-  Humidity
-  <!-- Insert humidity here -->
-
-  Wind
-  <!-- Insert wind here -->   
-  
-  Precipitation
-  <!-- Insert precipitation here -->
-
-  Daily forecast
-  <!-- Insert daily forecast for the next 7 days here -->
-
-  Hourly forecast
+                    <p>Wind Speed</p>
+                    <label><input type="radio" name="wind"> km/h</label>
+                    <label><input type="radio" name="wind"> mph</label>
+                      
+                    <p>Precipitation</p>
+                    <label><input type="radio" name="prec">Millimeters (mm)</label>
+                    <label> <input type="radio" name="prec">Inches(in)</label>
+                  </div>
+              </div>
+          </li>
+        </ul>
+    </nav>
+  </header>
+  <main>
+    <div>
+      <section class="hero">
+        <div>
+          <h1>How's the sky looking today?</h1>
+          <form action="" class="search-form">
+            <input type="search" placeholder="Search for a city, e.g., New York">
+            <button>Search</button>
+          </form>
+        </div>
+      </section>
+      <section>
+        <div>
+          <div>
+            <div>
+              <h5>Berlin , Germany</h5>
+              <p>Tuesday,Aug 5,2025</p>
+            </div>
+            <div>
+              <img src="assets/images/icon-sunny.webp" alt="">
+              <h1>20</h1>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p>Feels like</p>
+              <!-- Insert temperature here -->
+              <h5>18</h5>
+            </div>
+            <div>
+              <p>Humidity</p>
+              <!-- Insert humidity here -->
+              <h5>46%</h5>
+            </div>
+            <div>
+              <p>Wind</p>
+              <!-- Insert wind here -->   
+              <h5>14km/h</h5>
+            </div>
+            <div>
+              <p>Precipitation</p>
+              <!-- Insert precipitation here -->
+              <h5>0mm</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <h5>Daily forecast</h5>
+          <!-- Insert daily forecast for the next 7 days here -->
+          <div>
+            <div>
+              <h5>Tue</h5>
+              <img src="" alt="">
+              <p><span>20</span> <span>15</span></p>
+            </div>
+            <div>
+              <h5>Tue</h5>
+              <img src="" alt="">
+              <p><span>20</span> <span>15</span></p>
+            </div>
+            <div>
+              <h5>Tue</h5>
+              <img src="" alt="">
+              <p><span>20</span> <span>15</span></p>
+            </div>
+            <div>
+              <h5>Tue</h5>
+              <img src="" alt="">
+              <p><span>20</span> <span>15</span></p>
+            </div>
+            <div>
+              <h5>Tue</h5>
+              <img src="" alt="">
+              <p><span>20</span> <span>15</span></p>
+            </div>
+            <div>
+              <h5>Tue</h5>
+              <img src="" alt="">
+              <p><span>20</span> <span>15</span></p>
+            </div>
+            <div>
+              <h5>Tue</h5>
+              <img src="" alt="">
+              <p><span>20</span> <span>15</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div>
+      <section>
+        <h5>Hourly forecast</h5>
   <!-- Insert hourly forecast for the selected day here -->
-
+        <div>
+          <div>
+            <div>
+              <img src="" alt="">
+              <span>3PM</span>
+            </div>
+            <h6>18</h6>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div>
+              <img src="" alt="">
+              <span>3PM</span>
+            </div>
+            <h6>18</h6>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/evelynmukasa">Eva Mukasa</a>.
   </div>
+  </footer>
 </body>
 </html>
