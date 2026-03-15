@@ -9,155 +9,173 @@
 </head>
 <body>
   <header class="app-header">
-      <nav class="header__nav">
-        <ul class="nav__list">
-          <li><a href="#" class="logo"><img src="assets/images/logo.svg" alt=""></a></li>
-          <li class="nav__item nav__settings">
-              <div class="dropdown">
-                <button id="units"><img src="assets/images/icon-units.svg" alt="">Units<img src="assets/images/icon-dropdown.svg" alt=""></button>
-                  <div class="menu">
-                    <label><input type="radio"> Switch to Imperial</label>
-                    <p>Temperature</p>
-                    <label><input type="radio" name="temp" checked> Celsius (°C)
-                      <img src="assets/images/icon-checkmark.svg" alt="">
-                    </label>
-                    <label><input type="radio" name="temp"> Fahrenheit (°F)
-                      <img src="assets/images/icon-checkmark.svg" alt="">
-                    </label>
-                     <hr>
-                    <p>Wind Speed</p>
-                    <label>
-                      <input type="radio" name="wind"> km/h
-                      <img src="assets/images/icon-checkmark.svg" alt="">
-                    </label>
-                    <label>
-                      <input type="radio" name="wind"> mph
-                      <img src="assets/images/icon-checkmark.svg" alt="">
-                    </label>
-                      <hr>
-                    <p>Precipitation</p>
-                    <label><input type="radio" name="prec">Millimeters (mm)
-                      <img src="assets/images/icon-checkmark.svg" alt="">
-                    </label>
-                    <label> <input type="radio" name="prec">Inches (in)
-                      <img src="assets/images/icon-checkmark.svg" alt="">
-                    </label>
-                   </div>
-              </div>
-          </li>
-        </ul>
+    <nav class="header__nav">
+      <ul class="nav__list">
+        <li>
+          <a href="#" class="logo">
+            <img src="assets/images/logo.svg" alt="">
+          </a>
+        </li>
+        <li class="nav__item nav__settings">
+          <div class="dropdown">
+            <button id="units">
+              <img src="assets/images/icon-units.svg" alt="">
+              Units
+              <img src="assets/images/icon-dropdown.svg" alt="">
+            </button>
+            <div class="menu">
+              <label>
+                <input type="radio"> Switch to Imperial
+              </label>
+              <p>Temperature</p>
+              <label>
+                <input type="radio" name="temp" checked> Celsius (°C)
+                <img src="assets/images/icon-checkmark.svg" alt="">
+              </label>
+              <label>
+                <input type="radio" name="temp"> Fahrenheit (°F)
+                <img src="assets/images/icon-checkmark.svg" alt="">
+              </label>
+              <hr>
+              <p>Wind Speed</p>
+              <label>
+                <input type="radio" name="wind"> km/h
+                <img src="assets/images/icon-checkmark.svg" alt="">
+              </label>
+              <label>
+                <input type="radio" name="wind"> mph
+                <img src="assets/images/icon-checkmark.svg" alt="">
+              </label>
+              <hr>
+              <p>Precipitation</p>
+              <label>
+                <input type="radio" name="prec">Millimeters (mm)
+                <img src="assets/images/icon-checkmark.svg" alt="">
+              </label>
+              <label>
+                <input type="radio" name="prec">Inches (in)
+                <img src="assets/images/icon-checkmark.svg" alt="">
+              </label>
+            </div>
+          </div>
+        </li>
+      </ul>
     </nav>
   </header>
   <main class="app-main">
+    <section class="hero-section">
+      <div class="hero">
+        <h1>How's the sky looking today?</h1>
+        <form action="" class="search-form">
+          <div class="search-wrapper">
+            <img src="assets/images/icon-search.svg" alt="">
+            <input type="search" placeholder="Search for a city, e.g., New York" class="search-form__input">
+          </div>
+          <button class="search-form__button">Search</button>
+        </form>
+      </div>
+    </section>
     <div class="app-layout">
-      <section class="hero-section">
-        <div class="hero">
-          <h1>How's the sky looking today?</h1>
-          <form action="" class="search-form">
-            <div class="search-wrapper"><img src="assets/images/icon-search.svg" alt=""><input type="search" placeholder="Search for a city, e.g., New York" class="search-form__input"></div>
-            <button class="search-form__button">Search</button>
-          </form>
-        </div>
-      </section>
-      <section class="current-weather-section">
-        <div class="main-content">
-          <div class="location-city">
-            <div class="city-name">
-              <h2>Berlin , Germany</h2>
-              <p>Tuesday,Aug 5,2025</p>
+      <div class="layout-container">
+        <section class="current-weather-section">
+          <div class="main-content">
+            <div class="location-city">
+              <div class="city-name">
+                <h2>Berlin , Germany</h2>
+                <p>Tuesday,Aug 5,2025</p>
+              </div>
+              <div class="temperature-display">
+                <img src="assets/images/icon-sunny.webp" alt="">
+                <h1>20°</h1>
+              </div>
             </div>
-            <div class="temperature-display">
-              <img src="assets/images/icon-sunny.webp" alt="">
-              <h1>20°</h1>
-            </div>
-          </div>
-          <div class="weather-stats">
-            <div class="metric">
-              <p>Feels like</p>
-              <!-- Insert temperature here -->
-              <h5>18</h5>
-            </div>
-            <div class="metric">
-              <p>Humidity</p>
-              <!-- Insert humidity here -->
-              <h5>46%</h5>
-            </div>
-            <div class="metric">
-              <p>Wind</p>
-              <!-- Insert wind here -->   
-              <h5>14km/h</h5>
-            </div>
-            <div class="metric">
-              <p>Precipitation</p>
-              <!-- Insert precipitation here -->
-              <h5>0mm</h5>
+            <div class="weather-stats">
+              <div class="metric">
+                <p>Feels like</p>
+                <!-- Insert temperature here -->
+                <h5>18</h5>
+              </div>
+              <div class="metric">
+                <p>Humidity</p>
+                <!-- Insert humidity here -->
+                <h5>46%</h5>
+              </div>
+              <div class="metric">
+                <p>Wind</p>
+                <!-- Insert wind here -->
+                <h5>14km/h</h5>
+              </div>
+              <div class="metric">
+                <p>Precipitation</p>
+                <!-- Insert precipitation here -->
+                <h5>0mm</h5>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="daily-forecast-section">
-        <div class="daily-forecast">
-          <h5 class="subsection-title">Daily forecast</h5>
-          <!-- Insert daily forecast for the next 7 days here -->
-          <div class="daily-forecast-grid">
-            <div class="daily-forecast-item">
-              <h5>Tue</h5>
-              <img src="assets/images/icon-drizzle.webp" alt="">
-              <p><span>20°</span> <span>15°</span></p>
-            </div>
-            <div class="daily-forecast-item">
-              <h5>Tue</h5>
-              <img src="assets/images/icon-rain.webp" alt="">
-              <p><span>20°</span> <span>15°</span></p>
-            </div>
-            <div class="daily-forecast-item">
-              <h5>Tue</h5>
-              <img src="assets/images/icon-snow.webp" alt="">
-              <p><span>20°</span> <span>15°</span></p>
-            </div>
-            <div class="daily-forecast-item">
-              <h5>Tue</h5>
-              <img src="assets/images/icon-sunny.webp" alt="">
-              <p><span>20°</span> <span>15°</span></p>
-            </div>
-            <div class="daily-forecast-item">
-              <h5>Tue</h5>
-              <img src="assets/images/icon-storm.webp" alt="">
-              <p><span>20°</span> <span>15°</span></p>
-            </div>
-            <div class="daily-forecast-item">
-              <h5>Tue</h5>
-              <img src="assets/images/icon-drizzle.webp" alt="">
-              <p><span>20°</span> <span>15°</span></p>
-            </div>
-            <div class="daily-forecast-item">
-              <h5>Tue</h5>
-              <img src="assets/images/icon-sunny.webp" alt="">
-              <p><span>20°</span> <span>15°</span></p>
+        </section>
+        <section class="daily-forecast-section">
+          <div class="daily-forecast">
+            <h5 class="subsection-title">Daily forecast</h5>
+            <!-- Insert daily forecast for the next 7 days here -->
+            <div class="daily-forecast-grid">
+              <div class="daily-forecast-item">
+                <h5>Tue</h5>
+                <img src="assets/images/icon-drizzle.webp" alt="">
+                <p><span>20°</span> <span>15°</span></p>
+              </div>
+              <div class="daily-forecast-item">
+                <h5>Tue</h5>
+                <img src="assets/images/icon-rain.webp" alt="">
+                <p><span>20°</span> <span>15°</span></p>
+              </div>
+              <div class="daily-forecast-item">
+                <h5>Tue</h5>
+                <img src="assets/images/icon-snow.webp" alt="">
+                <p><span>20°</span> <span>15°</span></p>
+              </div>
+              <div class="daily-forecast-item">
+                <h5>Tue</h5>
+                <img src="assets/images/icon-sunny.webp" alt="">
+                <p><span>20°</span> <span>15°</span></p>
+              </div>
+              <div class="daily-forecast-item">
+                <h5>Tue</h5>
+                <img src="assets/images/icon-storm.webp" alt="">
+                <p><span>20°</span> <span>15°</span></p>
+              </div>
+              <div class="daily-forecast-item">
+                <h5>Tue</h5>
+                <img src="assets/images/icon-drizzle.webp" alt="">
+                <p><span>20°</span> <span>15°</span></p>
+              </div>
+              <div class="daily-forecast-item">
+                <h5>Tue</h5>
+                <img src="assets/images/icon-sunny.webp" alt="">
+                <p><span>20°</span> <span>15°</span></p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
-    <div class="hourly-panel">
-      <section class="hourly-forecast-section">
+        </section>
+      </div>
+      <div class="hourly-forecast-section">
+        <section >
         <div class="hourly-forecast-container">
           <div class="title-container">
             <h5 class="subsection-title">Hourly forecast</h5>
-              <div class="dropdown">
-                <button id="units">Tuesday<img src="assets/images/icon-dropdown.svg" alt=""></button>
-                  <div class="menu">
-                    <label><input name="days" type="radio" checked>Monday</label>
-                    <label><input name="days" type="radio">Tuesday</label>
-                    <label><input name="days" type="radio"> Wednesday</label>
-                    <label><input name="days" type="radio"> Thursday</label>
-                    <label><input name="days" type="radio">Friday</label> 
-                    <label><input name="days" type="radio">Saturday</label> 
-                    <label><input name="days" type="radio">Sunday</label>
-                  </div>
+            <div class="dropdown">
+              <button id="units">Tuesday<img src="assets/images/icon-dropdown.svg" alt=""></button>
+              <div class="menu">
+                <label><input name="days" type="radio" checked>Monday</label>
+                <label><input name="days" type="radio">Tuesday</label>
+                <label><input name="days" type="radio"> Wednesday</label>
+                <label><input name="days" type="radio"> Thursday</label>
+                <label><input name="days" type="radio">Friday</label>
+                <label><input name="days" type="radio">Saturday</label>
+                <label><input name="days" type="radio">Sunday</label>
               </div>
+            </div>
           </div>
-          <div class="hourly-forecast-list" >
+          <div class="hourly-forecast-list">
             <div>
               <div class="hourly-forecast-item">
                 <div class="hourly-forecast-timeblock">
@@ -230,19 +248,18 @@
                 <h6>18°</h6>
               </div>
             </div>
-
           </div>
-  <!-- Insert hourly forecast for the selected day here -->
-            
+          <!-- Insert hourly forecast for the selected day here -->
         </div>
-      </section>
+        </section>
+      </div>
     </div>
   </main>
   <footer class="app-footer">
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="https://www.frontendmentor.io/profile/evelynmukasa">Eva Mukasa</a>.
-  </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/evelynmukasa">Eva Mukasa</a>.
+    </div>
   </footer>
 </body>
 </html>

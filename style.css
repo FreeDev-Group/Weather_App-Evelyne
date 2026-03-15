@@ -122,10 +122,14 @@ li, ul, ol, small, sub, sup, label,input::placeholder {
   vertical-align: baseline;
   font-family: var(--font-sans);
 }
-
+main{
+    overflow-y:hidden;
+}
 /* Reset default browser styles */
 
+
 /* Header Styling Mobile view* */
+
 header{
     width: 100%;
 }
@@ -164,6 +168,7 @@ button{
     display: flex;
     flex-direction: column;
     border: solid 1.2px var(--Neutral600) ;
+    display: none;
 }
 .menu input{
     display: none;
@@ -199,9 +204,20 @@ button{
     }
 }
 
+   .app-layout{
+    width: 100%;
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(400px,1fr)) ;
+    justify-content: center;
+    grid-auto-flow: dense;
+    gap: 15px;
+}
+ 
+
 /* Hero Mobile View */
 .hero{
     padding: 15px;
+    width: 100%;
 }
 .hero h1{
     text-align: center;
@@ -217,6 +233,8 @@ button{
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+
 }
 .search-wrapper{
     position: relative;
@@ -254,6 +272,38 @@ button{
     border-radius: 10px;
     font-size: 1.1em;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 430px;
+    
+}
+@media (min-width:431px) {
+    .hero form{
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+    .hero .search-wrapper{
+        width: 70%;
+        max-width: 800px;
+    }
+    .hero button{
+        margin-bottom: 0;
+        padding: 10px 20px ;
+    }
+}
+
+@media (min-width:800px) {
+  .layout-container{
+    grid-column: span 2;
+    min-width: 800px;
+    justify-self: ri;
+}
+    .hero form{
+        max-width: 800px; 
+        margin: 0 auto;
+    }
 }
 /*location-city mobile View*/
 .main-content{
@@ -261,8 +311,9 @@ button{
  flex-direction: column;
  align-items: center;
  width: 100%;
- padding: 15px;
+ padding: 0 15px;
 }
+
 .location-city {
     width: 100%;
     min-width:343px;
@@ -275,7 +326,18 @@ button{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    max-width: 430px;
 }
+
+@media (min-width:830px) {
+   .location-city{
+    background-image: url(assets/images/bg-today-large.svg);
+    aspect-ratio:800/286 ;
+    max-width: 800px;
+   }
+    
+}
+
 .location-city .temperature-display{
     display: flex;
     align-items: center;
@@ -304,12 +366,12 @@ button{
 }
 /*Weather-stats Mobile view*/
 .weather-stats{
-    margin-top: 20px;
+    margin-top: 30px;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
     gap: 12px;
-
+    max-width: 800px;
 }
 .weather-stats .metric{
     background-color: var(--Neutral800);
@@ -326,11 +388,16 @@ button{
     margin-top: 1rem;
 }
 /*Daily Forecast Mobile */
+.daily-forecast{
+    max-width: 800px;
+    margin: 0 auto;
+}
 .daily-forecast-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit , minmax(100px,1fr));
-    gap: 12px;
+    gap: 11px;
     padding: 15px;
+    width: 100%;
 }
 .daily-forecast-grid .daily-forecast-item{
     background-color: var(--Neutral800);
@@ -342,7 +409,7 @@ button{
     gap: 20px;
     padding: 10px;
     border: 1.5px solid var(--Neutral600);
-    max-width: 150px;
+    max-width: 100px;
 }
 .daily-forecast-grid .daily-forecast-item img{
     width: 50px;
@@ -353,23 +420,37 @@ button{
     justify-content: space-between;   
     font-weight: 700;
 }
+.daily-forecast .subsection-title{
+    margin-left: 15px;
+    margin-top: 20px;
+}
 .subsection-title{
     font-size: 1.2em;
     font-weight: 700;
 }
 .hourly-forecast-section{
-    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
 }
+@media (min-width:1230px) {
+    .hourly-forecast-section{
+        width: auto;
+        justify-self: left;
+    }
+}
+
 .hourly-forecast-container{
     background-color: var(--Neutral800);
     display: flex;
     flex-direction: column;
-    margin:auto;
     border-radius: 15px;
     padding: 15px;
     gap: 15px;
-    overflow-y:scroll ;
-    max-width: 375px;
+    max-width: 400px;
+    min-width: 345px;
 }
 .hourly-forecast-list{
     display: flex;
