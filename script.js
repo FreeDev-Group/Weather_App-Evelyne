@@ -2,7 +2,7 @@ const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from((root || document).querySelectorAll(sel));
 
 const state = {
-  city: "Berlin",
+  city: "Goma",
   location: null,
   forecast: null,
   selectedDayIndex: 0,
