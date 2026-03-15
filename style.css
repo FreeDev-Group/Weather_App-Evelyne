@@ -136,7 +136,11 @@ main{
 *::-webkit-scrollbar-track { background: var(--Neutral600); }
 *::-webkit-scrollbar-thumb { background: var(--Neutral600); }
 /* Reset default browser styles */
-
+.dropdown--open > .menu {
+  display: flex;
+}
+.dropdown .menu { display: none; }
+.dropdown.dropdown--open .menu { display: flex; /* or block */ }
 
 /* Header Styling Mobile view* */
 
@@ -149,6 +153,7 @@ nav ul{
     justify-content: space-between;
     margin: 15px;
 }
+
 nav ul .logo img{
     width: 150px;
 }
@@ -207,7 +212,7 @@ button{
 /* Nav Desktop View */
 @media (min-width: 1440px) {
     nav ul{
-        margin: 40px 80px;
+        margin: 30px 80px 0 80px;
     }
     nav ul .logo img{
         width: 200px;
@@ -216,15 +221,16 @@ button{
 
    .app-layout{
     width: 100%;
-    display: grid;
-    grid-template-columns:repeat(auto-fit,minmax(400px,1fr)) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    grid-auto-flow: dense;
     gap: 15px;
+    margin-bottom: 30px;
 }
 @media (min-width:1230px) {
     .app-layout{
-        
+        flex-direction: row;
     }
 }
  
@@ -240,6 +246,12 @@ button{
     font-size: 3em;
     line-height: 1.2em;
     margin: 35px;
+}
+@media (min-width:1440px) {
+    .hero h1{
+        margin: 0px 35px 35px 35px ;
+    }
+    
 }
 .section-title {
   font-family: var(--font-display);
@@ -317,7 +329,6 @@ button{
   .layout-container{
     grid-column: span 2;
     min-width: 800px;
-    justify-self: ri;
 }
     .hero form{
         max-width: 800px; 
@@ -392,7 +403,7 @@ button{
 /*Weather-stats Mobile view*/
 .weather-stats{
     margin-top: 30px;
-    width: 100%;
+    width: calc(100vw - 30px);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
     gap: 12px;
@@ -416,15 +427,17 @@ button{
 .daily-forecast{
     max-width: 800px;
     margin: 0 auto;
+    width: calc(100vw - 30px);
 }
 
 .daily-forecast-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(100px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
     gap: 11px;
-    padding: 15px;
-    width: 100%;
+    justify-content: center;
+     margin-top:15px;
 }
+
 .daily-forecast-grid .daily-forecast-item{
     background-color: var(--Neutral800);
     border-radius: 15px;
@@ -432,10 +445,10 @@ button{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     padding: 10px;
     border: 1.5px solid var(--Neutral600);
-    max-width: 100px;
+    max-width: 115px;
 }
 .daily-forecast-grid .daily-forecast-item img{
     width: 50px;
@@ -454,6 +467,7 @@ button{
     font-size: 1.2em;
     font-weight: 700;
 }
+
 .hourly-forecast-section{
     display: flex;
     justify-content: center;
@@ -477,12 +491,13 @@ button{
     gap: 15px;
     max-width: 400px;
     min-width: 345px;
+    height: 634px;
 }
 .hourly-forecast-list{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    height: 550px;
+    height: 100%;
     overflow-y: scroll;
 }
  .hourly-forecast-item{
@@ -519,10 +534,6 @@ button{
   top: 36px;
   
 }
-.dropdown--open > .menu {
-  display: flex;
-}
-.dropdown .menu { display: none; }
-.dropdown.dropdown--open .menu { display: flex; /* or block */ }
+
 
 
