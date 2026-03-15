@@ -246,6 +246,7 @@ button{
     font-size: 3em;
     line-height: 1.2em;
     margin: 35px;
+    font-family: var(--font-display);
 }
 @media (min-width:1440px) {
     .hero h1{
