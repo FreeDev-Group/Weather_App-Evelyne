@@ -57,6 +57,9 @@
 --font-display: "Bricolage Grotesque", system-ui, sans-serif;
 }
 
+html {
+  scrollbar-width: thin;
+}
 /* Reset default browser styles */
 *,
 *::before,
@@ -125,6 +128,13 @@ li, ul, ol, small, sub, sup, label,input::placeholder {
 main{
     overflow-y:hidden;
 }
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--Neutral300) var(--Neutral600);
+}
+*::-webkit-scrollbar { width: 2px; }
+*::-webkit-scrollbar-track { background: var(--Neutral600); }
+*::-webkit-scrollbar-thumb { background: var(--Neutral600); }
 /* Reset default browser styles */
 
 
@@ -212,12 +222,18 @@ button{
     grid-auto-flow: dense;
     gap: 15px;
 }
+@media (min-width:1230px) {
+    .app-layout{
+        
+    }
+}
  
 
 /* Hero Mobile View */
 .hero{
     padding: 15px;
     width: 100%;
+    margin-bottom: 20px;
 }
 .hero h1{
     text-align: center;
@@ -233,7 +249,6 @@ button{
     display: flex;
     flex-direction: column;
     gap: 10px;
-
 
 }
 .search-wrapper{
@@ -251,6 +266,10 @@ button{
     border: none;
     border-radius: 10px;
     width: 100%;
+    color: var(--Neutral200);
+    font-size: 1.2em;
+    font-family: var(--font-sans);
+    font-weight: 500;
 }
 .hero input::placeholder{
     color: var(--Neutral200);
@@ -334,6 +353,7 @@ button{
     background-image: url(assets/images/bg-today-large.svg);
     aspect-ratio:800/286 ;
     max-width: 800px;
+    flex-direction: row;
    }
     
 }
@@ -350,6 +370,11 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+@media (min-width:830px) {
+    .city-name{
+     align-items: start;
+    }
 }
 .city-name h2 {
     font-size:1.5em ;
@@ -392,6 +417,7 @@ button{
     max-width: 800px;
     margin: 0 auto;
 }
+
 .daily-forecast-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit , minmax(100px,1fr));
@@ -447,7 +473,7 @@ button{
     display: flex;
     flex-direction: column;
     border-radius: 15px;
-    padding: 15px;
+    padding: 15px 0 15px 15px  ;
     gap: 15px;
     max-width: 400px;
     min-width: 345px;
@@ -467,6 +493,7 @@ button{
     border-radius: 10px;
     border: 1.5px solid var(--Neutral600);
     padding-right: 10px;
+    margin-right:15px ;
 }
 .hourly-forecast-timeblock{
     display: flex;
@@ -485,10 +512,17 @@ button{
     margin-bottom: 0;
     gap: 10px;
     padding: 6px 15px;
+    margin-right: 15px;
    
 }
 .title-container .menu{
   top: 36px;
   
 }
+.dropdown--open > .menu {
+  display: flex;
+}
+.dropdown .menu { display: none; }
+.dropdown.dropdown--open .menu { display: flex; /* or block */ }
+
 
