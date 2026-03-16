@@ -163,6 +163,8 @@ nav ul .logo img{
 button{
     margin-bottom: 10px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--Neutral800);
     color: var(--Neutral200);
     gap: 5px;
@@ -530,6 +532,7 @@ button{
     padding: 6px 15px;
     margin-right: 15px;
    
+
 }
 .title-container .menu{
   top: 36px;
